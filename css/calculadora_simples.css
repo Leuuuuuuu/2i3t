@@ -22,6 +22,7 @@ body{
 .btn{
     text-align: center;
     padding: 5px;
+    font-size: 22px;
 }
 button{
     width: 40px;
@@ -34,4 +35,5 @@ button{
 
 #igual {
     background-color: #9bd0b7;
+    color: white;
 }
