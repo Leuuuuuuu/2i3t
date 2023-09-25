@@ -1,9 +1,10 @@
 let a = "";
 let b = "";
-let valor = 0;
+let valor = "";
 let executar = "";
+let temPonto = false;
 
-soma = (a,b) => a + b;
+soma = (a,b) => Number(a) + Number(b);
 sub = (a,b) => a - b;
 mult = (a,b) => a * b;
 div = (a,b) => a / b;
@@ -23,21 +24,35 @@ function mostrar_resultado(){
 
 function calcular(){
     if(executar != ""){
-        if(executar = "soma") mostrar_resultado(soma(a,b));
-        if(executar = "sub") mostrar_resultado(sub(a,b));
-        if(executar = "div") mostrar_resultado(div(a,b));
-        if(executar = "mult") mostrar_resultado(mult(a,b));
+        b = valor;
+        if(executar == "soma") valor = soma(Number(a),Number(b));
+        if(executar == "sub") valor = sub(a,b);
+        if(executar == "div") valor = div(a,b);
+        if(executar == "mult") valor = mult(a,b);
+        mostrar_resultado();
         executar = "";
-        a = ""
+        a = "";
         b = "";
+        valor = "";
+        temPonto = false;
     }
 }
 
+function operacao(op){
+    executar = op;
+    a = valor;
+    valor = "";
+}
+
 function digitando(tecla){
-   if(executar == ""){
-       a += tecla;
-       alert(a);
-   }else{
-       b += tecla;
-   } 
+   if (tecla == "."){
+       if(!temPonto) {
+         valor = valor + tecla;
+         mostrar_resultado();
+         temPonto = true;
+       }
+       return;
+   }
+   valor = valor + tecla;
+   mostrar_resultado();
 }
