@@ -3,6 +3,7 @@ let b = "";
 let valor = "";
 let executar = "";
 let temPonto = false;
+let desligada = true;
 
 soma = (a,b) => Number(a) + Number(b);
 sub = (a,b) => a - b;
@@ -29,6 +30,8 @@ function calcular(){
         if(executar == "sub") valor = sub(a,b);
         if(executar == "div") valor = div(a,b);
         if(executar == "mult") valor = mult(a,b);
+        if(execurat == "porc") valor = 0;
+        if(execurat == "raiz") valor = raiz(a);
         mostrar_resultado();
         executar = "";
         a = "";
@@ -36,6 +39,25 @@ function calcular(){
         valor = "";
         temPonto = false;
     }
+}
+
+function desliga(){
+    if (desligada){
+        zerar();
+    }else{
+        zerar();
+        mostrar_resultado();
+    }
+    desligada = !desligada;
+}
+
+function zerar(){
+    a = "";
+    b = "";
+    valor = "0";
+    executar = "";
+    mostrar_resultado();
+    valor = "";
 }
 
 function operacao(op){
