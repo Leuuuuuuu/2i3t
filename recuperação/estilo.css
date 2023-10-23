@@ -1,0 +1,20 @@
+body {
+    background-color: bisque;
+}
+
+.minha_lista{
+    font-size: 24px;
+}
+
+.formulario{
+    font-size: 24px;
+    border-radius: 7px;
+}
+
+.butao{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 25px;
+}
