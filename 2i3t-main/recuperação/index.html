@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="atualiza_lista()">
+    <div class="formulario">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+    </div><br>
+    <div class="btn">
+        <button onclick="inserir_ultimo()" class="butao">Inserir Ultimo</button><br>
+        <button onclick="inserir_primeiro()" class="butao">Inserir Primeiro</button><br>
+        <button onclick="deletar_ultimo()" class="butao">Deletar Ultimo</button><br>
+        <button onclick="deletar_primeiro()" class="butao">Deletar Primeiro</button><br>
+        <button onclick="limpar_lista()" class="butao">Limpar Lista</button><br>
+        <button onclick="AZ()" class="butao">Ordenar de A-Z</button><br>
+        <button onclick="ZA()" class="butao">Ordenar de Z-A</button><br>
+
+        <br>
+        <span id="error"></span>
+    </div>
+    <div class="minha_lista">
+        <h3>Lista de nomes</h3>
+        <span id="lista"></span>
+    </div>
+</body>
+</html>
